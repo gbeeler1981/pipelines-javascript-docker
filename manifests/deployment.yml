@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gbeelerpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gbeelerpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gbeelerpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gbeelerpipelinesjavascriptdocker 
+          image: baylorgenetics.azurecr.io/gbeelerpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
